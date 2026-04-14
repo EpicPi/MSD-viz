@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="title">
+    <h1>MSD Etsy sales, 2018 — 2025</h1>
+    <div id="stats"></div>
+  </header>
+
+  <main id="stage">
+    <svg id="map" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <div id="storefront" class="storefront" title="In-person sales">
+      <svg class="shop" viewBox="0 0 64 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="22" width="56" height="40" class="shop-body"/>
+        <polygon points="2,22 32,6 62,22" class="shop-roof"/>
+        <rect x="26" y="38" width="12" height="24" class="shop-door"/>
+        <rect x="10" y="30" width="10" height="8" class="shop-window"/>
+        <rect x="44" y="30" width="10" height="8" class="shop-window"/>
+        <rect x="10" y="14" width="44" height="8" class="shop-awning"/>
+      </svg>
+      <div class="storefront-label">
+        <div class="storefront-title">in-person sales</div>
+        <div id="storefront-count" class="storefront-count">0</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="controls">
+    <div class="controls-row">
+      <button id="play" class="btn-play" type="button">▶</button>
+
+      <label class="control">
+        <span class="ctl-label">speed</span>
+        <select id="speed">
+          <option value="1">1×</option>
+          <option value="3" selected>3×</option>
+          <option value="8">8×</option>
+          <option value="20">20×</option>
+        </select>
+      </label>
+
+      <div class="scrub">
+        <input id="scrub" type="range" min="0" max="100" step="1" value="0">
+        <div id="date-label" class="date-label">—</div>
+      </div>
+
+      <label class="control">
+        <span class="ctl-label">projection</span>
+        <div class="segmented" id="projection">
+          <button data-value="globe" class="active" type="button">globe</button>
+          <button data-value="mercator" type="button">mercator</button>
+        </div>
+      </label>
+
+      <label class="control">
+        <span class="ctl-label">mode</span>
+        <div class="segmented" id="mode">
+          <button data-value="accumulate" class="active" type="button">accumulate</button>
+          <button data-value="flash" type="button">flash</button>
+        </div>
+      </label>
+    </div>
+
+    <div class="controls-row controls-row-range">
+      <label class="control">
+        <span class="ctl-label">range</span>
+        <div id="window-label" class="window-label">—</div>
+      </label>
+
+      <div class="range-slider" id="range-slider">
+        <div class="range-track"></div>
+        <div class="range-fill" id="range-fill"></div>
+        <input id="range-start" class="range-input" type="range" min="0" max="100" step="1" value="0">
+        <input id="range-end" class="range-input" type="range" min="0" max="100" step="1" value="100">
+      </div>
+
+      <div class="segmented presets" id="year-presets">
+        <button data-year="all" class="active" type="button">all</button>
+        <button data-year="2018" type="button">2018</button>
+        <button data-year="2019" type="button">2019</button>
+        <button data-year="2020" type="button">2020</button>
+        <button data-year="2021" type="button">2021</button>
+        <button data-year="2022" type="button">2022</button>
+        <button data-year="2023" type="button">2023</button>
+        <button data-year="2024" type="button">2024</button>
+        <button data-year="2025" type="button">2025</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
