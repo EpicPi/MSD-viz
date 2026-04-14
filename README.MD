@@ -18,7 +18,7 @@ etsy-viz/
 │   └── consolidated_sales.csv      produced by consolidate_sales.py
 ├── consolidate_sales.py            merges yearly exports into one CSV
 ├── geocode_and_export.py           geocodes and emits site/data/sales.json
-├── site/                           the static website
+├── docs/                           the static website (docs folder since that's where github pages looks)
 │   ├── index.html
 │   ├── app.js                      D3-based map + animation
 │   ├── style.css
@@ -69,7 +69,7 @@ of unique `(city, state, country)` tuples.
 ## Running locally
 
 ```bash
-python3 -m http.server 8765 --directory site
+python3 -m http.server 8765 --directory docs
 ```
 
 Open <http://localhost:8765>.
@@ -78,7 +78,7 @@ URL parameters for deep-linking: `?week=<N>&proj=globe|mercator&mode=accumulate|
 
 ## Deploying
 
-`site/` is a plain static directory. Drop it onto any static host
+`docs/` is a plain static directory. Drop it onto any static host
 (GitHub Pages, Netlify, Cloudflare Pages) — no server-side code, no build step.
 
 ## Attribution
