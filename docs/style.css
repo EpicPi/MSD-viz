@@ -363,22 +363,20 @@ input[type="range"] {
 
   /* second row: hide dual slider, keep presets */
   .controls-row-range {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     min-height: 0;
     padding-top: 8px;
-    gap: 6px;
+    gap: 5px;
   }
   .controls-row-range > .control,
   .range-slider {
     display: none;
   }
   .segmented.presets {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
-    overflow: visible;
+    display: contents;
     border: none;
-    gap: 5px;
-    width: 100%;
-    box-sizing: border-box;
+    overflow: visible;
   }
   .segmented.presets button {
     border-radius: 999px;
